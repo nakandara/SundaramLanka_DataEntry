@@ -1,0 +1,19 @@
+.container{
+    background-color: aliceblue;
+    margin: 1.5cm;
+
+    min-width: 85cm   !important;
+}
+
+
+
+.containerOne{
+    background-color: ;
+    margin: 1.5cm;
+    display: flex;
+    min-width: 18cm   !important;
+
+    align-items: center !important;
+    justify-items: center !important;
+    justify-content: center;
+}

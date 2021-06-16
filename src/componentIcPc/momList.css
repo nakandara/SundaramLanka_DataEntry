@@ -1,0 +1,31 @@
+.wrap{
+    word-break: break-word;
+}
+
+.sucess{
+    margin-bottom: 1cm;
+}
+
+.datepicker{
+    margin-left: 8cm;
+    margin-right: 1cm;
+}
+
+th {
+    text-align: center;
+    vertical-align: center;
+}
+.thOne{
+    width: 10cm;
+}
+.thTwo{
+    width: 10cm;
+}
+.thSeven{
+    width: 1cm;
+}
+
+td {
+    text-align: center;
+    vertical-align: center;
+}

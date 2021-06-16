@@ -1,0 +1,36 @@
+.hr{
+  padding: 1.5cm;
+}
+
+.quality{
+  padding: 1.5cm;
+}
+
+.eng{
+  padding: 1.5cm;
+}
+
+.production{
+  padding: 1.5cm;
+}
+.mixing{
+  padding: 1.5cm;
+}
+
+.bead{
+  padding: 1.5cm;
+}
+.hold{
+  padding: 1.5cm;
+}
+
+
+.update{
+  max-width: 8cm;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 4cm;
+  margin-top: 0.5cm;
+}

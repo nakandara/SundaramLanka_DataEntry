@@ -1,0 +1,27 @@
+.detail{
+   max-width: 1240px !important;
+   text-align: center !important;
+}
+
+
+.tHeadThreeD{
+   width: 8cm !important;
+   max-width: 8cm !important;
+   min-width: 8cm !important;
+   background-color:rgba(235, 226, 226, 0.747);
+   overflow-wrap: break-word;
+   
+
+}
+.tHeadTwo{
+
+   max-width: 4cm !important;
+   min-width: 4cm !important;
+}
+
+.tHead{
+   font-weight: 700 !important;
+
+   
+}
+
