@@ -26,7 +26,7 @@ const SearchSnPress = () => {
     var paramDateOne = yearNumber +'-'+ monthNumber +'-'+ dateNumber
     
     
-      console.log(paramDateOne)
+    
     
       var nextDay;
       
@@ -42,7 +42,7 @@ const SearchSnPress = () => {
     var paramDateTwo = yearNumberTwo +'-'+ monthNumberTwo +'-'+ dateNumberTwo
     
     
-    console.log( paramDateTwo )
+   
     
     const [refresh, setRefresh] = useState(false)
     
@@ -61,7 +61,7 @@ const SearchSnPress = () => {
         }
       };
      
-    console.log(builderPressData);
+    
       ///////////////
     
     
@@ -78,7 +78,7 @@ const SearchSnPress = () => {
     
       /////////////////////
     
-    console.log(pressData);
+    
      
     
     //////////////////////////////////////////
@@ -103,8 +103,6 @@ const SearchSnPress = () => {
     })
     
     
-    console.log(prarray);
-    console.log(bparray);
     
     
     
@@ -148,7 +146,7 @@ const SearchSnPress = () => {
     
     
     
-    console.log(diff);
+    
     
     
     

@@ -15,14 +15,14 @@ const UpdatePressNew = (props) => {
   const [responsible, setresponsible] = useState("")
   const [revised_date, setrevised_date] = useState("");
   const [target_date, settarget_date] = useState("")
-  const [rating, setrating] = useState("");
-
+  
 
   const [sn, setSn] = useState();
   const [press_no, setPress_no]   = useState();
   const [shift, setShift] = useState();
   const [tyre_type, setTyre_type] = useState()
   const [load_time,setLoad_time]  =useState()
+  const [time_gap, setTime_gap] = useState("");
 
 
 
@@ -52,7 +52,7 @@ const UpdatePressNew = (props) => {
       setShift(response.data.data.data.shift);
       setTyre_type(response.data.data.data.tyre_type);
       setLoad_time(response.data.data.data.load_time);
-     
+      setTime_gap(response.data.data.data.time_gap);
       
     };
 
@@ -70,7 +70,7 @@ const UpdatePressNew = (props) => {
     //   revised_date,
     //   rating,
     // });
-    const update = await RestaurantFinder.post(`/pressdata/press/update/${sn}`, { sn,press_no,shift,tyre_type,load_time
+    const update = await RestaurantFinder.post(`/pressdata/press/update/${sn}`, { sn,press_no,shift,tyre_type,load_time,time_gap 
      ,
     });
    console.log(update);

@@ -71,7 +71,7 @@ const [refresh, setRefresh] = useState(false)
       const response = await RestaurantFinder.get(`/builderpressdata/presses/${paramDateOne}/${paramDateTwo}`);
       
       setPressData(response.data.data.data);
-      console.log(response);
+      
     } catch (err) {
       console.log(err);
     }
@@ -80,7 +80,6 @@ const [refresh, setRefresh] = useState(false)
   /////////////////////
 
 
- console.log(pressData);
 
 //////////////////////////////////////////
 
