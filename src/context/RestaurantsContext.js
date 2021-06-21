@@ -163,6 +163,14 @@ const [machineCost,setMachineCost]=useState([])
     setPressData([...pressData,data])
   }
 
+  const addPressLine =(data)=>{
+    setPressLine([...pressLine,data])
+  }
+
+  const addPressOther =(data)=>{
+    setPressOther([...pressOther,data])
+  }
+
 const [builderPressData,setBuilderPressData]=useState([])
 const[builderPressDataOne,setBuilderPressDataOne] =useState()
 
@@ -176,8 +184,8 @@ var myTime = new Date()
 
 const [time,setTime] =useState(new Date( ))
 
-
-
+const [pressLine,setPressLine]= useState([])
+const [pressOther,setPressOther]= useState([])
 
 
 
@@ -195,7 +203,7 @@ const [time,setTime] =useState(new Date( ))
         login,setLogin,mixingRccm,setMixingRccm,holdRccm,setHoldRccm,beadRccm,setBeadRccm,engRccm,setENGRccm,
         addQualityRccm,addMixingRccm,addHoldRccm,addHRRccm,addENGRccm,addBeadRccm,hrRccm,setHRRccm,addPress,setPress,press,time,setTime,
         builderPressData,setBuilderPressData,pressData,setPressData,diffData,setDiffData,builderPressDataOne,setBuilderPressDataOne,sn,setSn,mom,setMom,momsucess, setSucessmom,addMom,addMachineCost,
-        machineCost,setMachineCost
+        machineCost,setMachineCost,pressLine,setPressLine,addPressOther,pressOther,setPressOther,addPressLine
       }}
     >
       {props.children}

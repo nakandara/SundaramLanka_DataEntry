@@ -49,8 +49,10 @@ import SucessMom from "./routes/momRoute/SucessMom";
 import MachineCost from "./routes/MachineCost";
 import UpdateMachineCost from "./componentsMachineCost/UpdateMachineCost";
 import UpdateMachineCostPage from "./routes/UpdateMachineCostPage";
-
-
+import PressLine from "./routes/PressLine";
+import UpdateLinePage from "./routes/UpdateLinePage";
+import PressOther from "./routes/PressOther";
+import UpdatePressOtherPage from "./routes/UpdatePressOtherPage";
 
 
 
@@ -146,6 +148,11 @@ const App = () => {
             <Route exact path="/pressnew/:sn" component={PressNew} />
             <Route exact path="/press/:id/update/pressnew" component={UpdatePressNewPage} /> 
 
+           <Route exact path="/pressline" component={PressLine} />
+            <Route exact path="/pressline/:id/update/pressline" component={UpdateLinePage} /> 
+
+            <Route exact path="/pressother" component={PressOther} />
+            <Route exact path="/pressother/:id/update/pressother" component={UpdatePressOtherPage} /> 
 
             {/* <Route
               exact
