@@ -54,7 +54,9 @@ import UpdateLinePage from "./routes/UpdateLinePage";
 import PressOther from "./routes/PressOther";
 import UpdatePressOtherPage from "./routes/UpdatePressOtherPage";
 
+// pramod create all route path
 
+import FgsAccuracy from "./routes/FgsAccuracy"
 
 
 const App = () => {
@@ -152,7 +154,11 @@ const App = () => {
             <Route exact path="/pressline/:id/update/pressline" component={UpdateLinePage} /> 
 
             <Route exact path="/pressother" component={PressOther} />
-            <Route exact path="/pressother/:id/update/pressother" component={UpdatePressOtherPage} /> 
+            <Route exact path="/pressother/:id/update/pressother" component={UpdatePressOtherPage} />
+            <Route exact path="/fgsacccuracy" component={FgsAccuracy} /> 
+            {/* pramod create all route */}
+            
+            
 
             {/* <Route
               exact

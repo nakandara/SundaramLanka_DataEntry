@@ -12,6 +12,7 @@ export const RestaurantsContextProvider = (props) => {
   const [hr, setHR] = useState([]);
   const [hold, setHold] = useState([]);
   const [press, setPress] = useState([]);
+  const [fgsaccuracy, setFgsAccuracy] = useState([]);
  
 ///////////////////////rccm--------------------------
 
@@ -129,7 +130,9 @@ const [machineCost,setMachineCost]=useState([])
   const addHold = (data) => {
     setHold([...hold, data]);
   };
-
+  const addFgsaccuracy = (data) => {
+    setFgsAccuracy([...fgsaccuracy, data]);
+  };
 
   const addSucess = (suces) => {
     setSucess([...sucess, suces]);
@@ -191,7 +194,7 @@ const [pressOther,setPressOther]= useState([])
 
   return (
     <RestaurantsContext.Provider
-      value={{icpcsucess,setSucessicpc,datem, setDatem,ddate, setDdate,dateOne,setDateOne,dateTwo,setDateTwo,category,setCategory, addDetail,detail,setDetail,addSucess,icpc,setICPC,addICPC,production,setProduction,productionRccm,setProductionRccm,quality,setQuality,qualityRccm,setQualityRccm,addProduction,addQuality,hold,setHold,addHold,
+      value={{icpcsucess,setSucessicpc,datem, setDatem,ddate, setDdate,dateOne,setDateOne,dateTwo,setDateTwo,category,setCategory, addDetail,detail,setDetail,addSucess,icpc,setICPC,addICPC,production,setProduction,productionRccm,setProductionRccm,quality,setQuality,qualityRccm,setQualityRccm,addProduction,addQuality,hold,setHold,addHold,setFgsAccuracy,addFgsaccuracy,
         quality,setQuality,addQuality,mixing,addMixing,setMixing,eng,addENG,setENG,hr,setHR,addHR,bead,addBead,setBead,addProductionRccm,
         restaurants,
         setRestaurants,
