@@ -57,6 +57,10 @@ import UpdatePressOtherPage from "./routes/UpdatePressOtherPage";
 // pramod create all route path
 
 import FgsAccuracy from "./routes/FgsAccuracy"
+import Shotblasting from "./routes/Shotblasting"
+import Band from "./routes/Band"
+import Homefgs from "./routes/fgsAccuracyRoute/HomeFgs";
+import UpdateFgsPage from "./routes/UpdateFgsPage";
 
 
 const App = () => {
@@ -114,6 +118,9 @@ const App = () => {
             
             <Route exact path="/production/:id/update/production" component={UpdatePage}/>
             <Route exact path="/quality/:id/update/quality" component={UpdateQualityPage} />
+        {/* pramod route*/}
+            <Route exact path="/fgsaccuracy/:id/update/fgsaccuracy" component={UpdateFgsPage} />
+            {/* pramod route*/}
             <Route exact path="/bead/:id/update/bead" component={UpdateBeadPage} />
             <Route exact path="/mixing/:id/update/mixing" component={UpdateMixingPage} />
             <Route exact path="/hr/:id/update/hr" component={UpdateHRPage} />
@@ -155,11 +162,14 @@ const App = () => {
 
             <Route exact path="/pressother" component={PressOther} />
             <Route exact path="/pressother/:id/update/pressother" component={UpdatePressOtherPage} />
-            <Route exact path="/fgsacccuracy" component={FgsAccuracy} /> 
+            
             {/* pramod create all route */}
             
+            <Route exact path="/fgsaccuracy" component={FgsAccuracy} />
+            <Route exact path="/fgsaccuracy/rccm" component={Homefgs} /> 
+            <Route exact path="/shotBlasting" component={Shotblasting} /> 
+            <Route exact path="/Band" component={Band} /> 
             
-
             {/* <Route
               exact
               path="/production/quality/sucess"
