@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from "../componentsFgs/Header"
-import AddFgs from "../componentsFgs/AddFgs"
-import FgsList from '../componentsFgs/FgsList'
+import Header from "../ComponentsBand/Header"
+import AddBand from "../ComponentsBand/AddBand"
+import BandList from '../ComponentsBand/BandList'
 
 
 import './route.css'
@@ -11,9 +11,9 @@ const FgsAccuracy = () => {
     return (
         <div className='FgsAccuracy'>
         <Header/>
-        <AddFgs/>
+        <AddBand/>
      
-        <FgsList/>
+        <BandList/>
         </div>
     )
 }

@@ -3,9 +3,9 @@ import RestaurantFinder from "../apis/RestaurantFinder";
 import { RestaurantsContext } from "../context/RestaurantsContext";
 import { useHistory } from "react-router-dom";
 
-const AddFgsList = () => {
+const AddshotBlasting = () => {
   let history = useHistory();
-  const { addFgsaccuracy } = useContext(RestaurantsContext);
+  const { addShotBlasting } = useContext(RestaurantsContext);
   const [point_discussed, setpoint_discussed] = useState("");
   const [countermeasure, setcountermeasure]   = useState("");
   const [revised_date, setrevised_date] = useState(new Date());
@@ -17,31 +17,35 @@ const AddFgsList = () => {
   
   const [date, setDate] = useState(new Date());
   
-  const [fgs_invert, setFgs_invert]   = useState([]);
-  const [daily_pdi, setDaily_pdi]   = useState([]);
-  const [shipment_dispatch, setShipment_dispatch]   = useState([]);
-  const [shipment_plan, setShipment_plan]   = useState([]);
-  const [actual_stock, setActual_stock]   = useState([]);
+  const [m1_plan, setM1_plan]   = useState([]);
+  const [m2_plan, setM2_plan]   = useState([]);
+  const [m1_actual, setM1_actual]   = useState([]);
+  const [m2_actual, setM2_actual]   = useState([]);
+ 
  
 
   
   
   const handleSubmitQuality = async (e) => {
     e.preventDefault();
-    try {  
-      const response = await RestaurantFinder.post("/reporting/fgs", {
-        date, fgs_invert,daily_pdi,shipment_dispatch,shipment_plan,actual_stock
+    try {
+        console.log(date)
+      const response = await RestaurantFinder.post("/reporting/shotblasting", {
+        date,m1_plan,m2_plan,m1_actual,m2_actual
       });
       console.log(response);
-      console.log("dsihfdhgfdi")
-      addFgsaccuracy(response.data.data.data);
+      addShotBlasting(response.data.data.data);
       window.location.reload();
     } catch (err) {
       console.log(err);
     }
   }; const handleSucess= async (e) => {
     e.preventDefault();
-    history.push(`quality/rccm`);}
+    window.location.reload();
+    history.push(`quality/rccm`);
+    
+  }
+    
 
   return (
     <div className="mb-3 ml-4 mr-5">
@@ -58,52 +62,44 @@ const AddFgsList = () => {
           </div>
           <div className="col">
             <input
-              value={fgs_invert}
-              onChange={(e) => setFgs_invert(e.target.value)}
+              value={m1_plan}
+              onChange={(e) => setM1_plan(e.target.value)}
               className="form-control"
               type="number"
-              placeholder="Fgs invert"
+              placeholder="Machine1 plan"
             />
           </div>
           
           
           <div className="col">
             <input
-              value={daily_pdi}
-              onChange={(e) =>setDaily_pdi (e.target.value)}
+              value={m2_plan}
+              onChange={(e) =>setM2_plan (e.target.value)}
               className="form-control"
               type="number"
-              placeholder="Daily Pdi"
+              placeholder="Machine2 plan"
             />
           </div>
         
           <div className="col">
             <input
-              value={shipment_dispatch}
-              onChange={(e) =>setShipment_dispatch (e.target.value)}
+              value={m1_actual}
+              onChange={(e) =>setM1_actual (e.target.value)}
               className="form-control"
               type="number"
-              placeholder="Shipment Up to Date Dispatch"
+              placeholder="Machine 1 actual"
             />
           </div>
           <div className="col">
             <input
-              value={shipment_plan}
-              onChange={(e) =>setShipment_plan (e.target.value)}
+              value={m2_actual}
+              onChange={(e) =>setM2_actual (e.target.value)}
               className="form-control"
               type="number"
-              placeholder="Shipment Plan"
+              placeholder="Machine 2 actual"
             />
           </div>
-          <div className="col">
-            <input
-              value={actual_stock}
-              onChange={(e) =>setActual_stock (e.target.value)}
-              className="form-control"
-              type="number"
-              placeholder="Actual stock"
-            />
-          </div>
+          
           
               
          
@@ -127,4 +123,4 @@ const AddFgsList = () => {
   );
 };
 
-export default AddFgsList;
+export default AddshotBlasting;

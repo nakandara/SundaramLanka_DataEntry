@@ -7,78 +7,62 @@ export const RestaurantsContextProvider = (props) => {
   const [production, setProduction] = useState([]);
   const [quality, setQuality] = useState([]);
   const [bead, setBead] = useState([]);
-  const [mixing, setMixing] = useState([])
+  const [mixing, setMixing] = useState([]);
   const [eng, setENG] = useState([]);
   const [hr, setHR] = useState([]);
   const [hold, setHold] = useState([]);
   const [press, setPress] = useState([]);
+  //pramod under code
   const [fgsaccuracy, setFgsAccuracy] = useState([]);
- 
-///////////////////////rccm--------------------------
+  const [fgsGetTable, setFgsGetTable] = useState([]);
+  const [shotBlasting, setShotBlasting] = useState([]);
+  const [shotBlastingGetTable, setShotBlastingGetTable] = useState([]);
 
+  ///////////////////////rccm--------------------------
 
-const [productionRccm,setProductionRccm] = useState([])
-const [qualityRccm,setQualityRccm] = useState([])
-const [mixingRccm,setMixingRccm] = useState([])
-const [holdRccm,setHoldRccm] = useState([])
-const [beadRccm,setBeadRccm] = useState([])
-const [engRccm,setENGRccm] = useState([])
-const [hrRccm,setHRRccm] = useState([])
+  const [productionRccm, setProductionRccm] = useState([]);
+  const [qualityRccm, setQualityRccm] = useState([]);
+  const [mixingRccm, setMixingRccm] = useState([]);
+  const [holdRccm, setHoldRccm] = useState([]);
+  const [beadRccm, setBeadRccm] = useState([]);
+  const [engRccm, setENGRccm] = useState([]);
+  const [hrRccm, setHRRccm] = useState([]);
 
+  const [icpc, setICPC] = useState([]);
 
+  const [mom, setMom] = useState([]);
 
+  ////////////////////////
 
+  const [detail, setDetail] = useState([]);
 
-const [icpc,setICPC] = useState([])
+  const [dateOne, setDateOne] = useState();
+  const [dateTwo, setDateTwo] = useState(new Date());
+  const [category, setCategory] = useState("shift");
 
-const [mom,setMom] = useState([])
+  /////////////////////////////////////////////////
 
-////////////////////////
+  const [icpcsucess, setSucessicpc] = useState([]);
 
-const [detail,setDetail] = useState([])
+  const [momsucess, setSucessmom] = useState([]);
 
-
-
-const [dateOne,setDateOne] = useState()
-const [dateTwo,setDateTwo] = useState(new Date())
-const [category,setCategory] = useState('shift')
-
-
-
-/////////////////////////////////////////////////
-
-const [icpcsucess, setSucessicpc] =useState([])
-
-const [momsucess, setSucessmom] =useState([])
-
-const [machineCost,setMachineCost]=useState([])
-
-
-
-
-
-
-
-
-
-
+  const [machineCost, setMachineCost] = useState([]);
 
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
   const [sucess, setSucess] = useState([]);
-  const[login,setLogin] =useState('')
+  const [login, setLogin] = useState("");
   var myDate = new Date();
-    const [datem, setDatem] = useState(myDate.setDate(myDate.getDate() - 30));
-    const [ddate, setDdate] = useState(new Date());
+  const [datem, setDatem] = useState(myDate.setDate(myDate.getDate() - 30));
+  const [ddate, setDdate] = useState(new Date());
 
   const addRestaurants = (restaurant) => {
     setRestaurants([...restaurants, restaurant]);
   };
 
-
   const addProduction = (data) => {
     setProduction([...production, data]);
   };
-/////////////////////////////////////////////RCCM
+  /////////////////////////////////////////////RCCM
   const addProductionRccm = (data) => {
     setProductionRccm([...productionRccm, data]);
   };
@@ -86,30 +70,26 @@ const [machineCost,setMachineCost]=useState([])
   const addQualityRccm = (data) => {
     setQualityRccm([...qualityRccm, data]);
   };
-  
+
   const addMixingRccm = (data) => {
     setMixingRccm([...mixingRccm, data]);
   };
-  
+
   const addHoldRccm = (data) => {
     setHoldRccm([...holdRccm, data]);
   };
-  
+
   const addHRRccm = (data) => {
     setHRRccm([...hrRccm, data]);
   };
-  
+
   const addENGRccm = (data) => {
     setENGRccm([...engRccm, data]);
   };
 
-
   const addBeadRccm = (data) => {
     setBeadRccm([...beadRccm, data]);
   };
-
-
-
 
   const addQuality = (data) => {
     setQuality([...quality, data]);
@@ -130,83 +110,193 @@ const [machineCost,setMachineCost]=useState([])
   const addHold = (data) => {
     setHold([...hold, data]);
   };
+  //pramod under code
+  //fgs Accuracy
   const addFgsaccuracy = (data) => {
     setFgsAccuracy([...fgsaccuracy, data]);
   };
-
+  const addfgsGetTable = (data) => {
+    setFgsGetTable([...fgsGetTable, data]);
+  };
   const addSucess = (suces) => {
     setSucess([...sucess, suces]);
-
-  
+  };
+  // shot blasting
+  const addShotBlasting = (data) => {
+    setShotBlasting([...shotBlasting, data]);
+  };
+  const addShotBlastingGetTable = (data) => {
+    setShotBlastingGetTable([...shotBlastingGetTable, data]);
+    
+  };
+  ///
+  const addICPC = (data) => {
+    setICPC([...icpc, data]);
   };
 
-  const addICPC = (data)=>{
+  const addMom = (data) => {
+    setMom([...mom, data]);
+  };
 
-    setICPC([...icpc,data])
-  }
+  const addDetail = (data) => {
+    setDetail([...detail, data]);
+  };
 
+  const addMachineCost = (data) => {
+    setMachineCost([...machineCost, data]);
+  };
 
-  const addMom = (data)=>{
+  const addPress = (data) => {
+    setPressData([...pressData, data]);
+  };
 
-    setMom([...mom,data])
-  }
+  const addPressLine = (data) => {
+    setPressLine([...pressLine, data]);
+  };
 
-  const addDetail = (data)=>{
+  const addPressOther = (data) => {
+    setPressOther([...pressOther, data]);
+  };
 
-    setDetail([...detail,data])
-  }
+  const [builderPressData, setBuilderPressData] = useState([]);
+  const [builderPressDataOne, setBuilderPressDataOne] = useState();
 
-  const addMachineCost = (data)=>{
+  const [diffData, setDiffData] = useState([]);
+  const [pressData, setPressData] = useState([]);
 
-    setMachineCost([...machineCost,data])
-  }
+  const [sn, setSn] = useState();
 
+  var myTime = new Date();
 
-  const addPress =(data)=>{
-    setPressData([...pressData,data])
-  }
+  const [time, setTime] = useState(new Date());
 
-  const addPressLine =(data)=>{
-    setPressLine([...pressLine,data])
-  }
-
-  const addPressOther =(data)=>{
-    setPressOther([...pressOther,data])
-  }
-
-const [builderPressData,setBuilderPressData]=useState([])
-const[builderPressDataOne,setBuilderPressDataOne] =useState()
-
-const[diffData,setDiffData] =useState([])
-const[pressData,setPressData]=useState([])
-
-const[sn,setSn] =useState()
-
-
-var myTime = new Date()
-
-const [time,setTime] =useState(new Date( ))
-
-const [pressLine,setPressLine]= useState([])
-const [pressOther,setPressOther]= useState([])
-
-
+  const [pressLine, setPressLine] = useState([]);
+  const [pressOther, setPressOther] = useState([]);
 
   return (
     <RestaurantsContext.Provider
-      value={{icpcsucess,setSucessicpc,datem, setDatem,ddate, setDdate,dateOne,setDateOne,dateTwo,setDateTwo,category,setCategory, addDetail,detail,setDetail,addSucess,icpc,setICPC,addICPC,production,setProduction,productionRccm,setProductionRccm,quality,setQuality,qualityRccm,setQualityRccm,addProduction,addQuality,hold,setHold,addHold,setFgsAccuracy,addFgsaccuracy,
-        quality,setQuality,addQuality,mixing,addMixing,setMixing,eng,addENG,setENG,hr,setHR,addHR,bead,addBead,setBead,addProductionRccm,
+      value={{
+        icpcsucess,
+        setSucessicpc,
+        datem,
+        setDatem,
+        ddate,
+        setDdate,
+        dateOne,
+        setDateOne,
+        dateTwo,
+        setDateTwo,
+        category,
+        setCategory,
+        addDetail,
+        detail,
+        setDetail,
+        addSucess,
+        icpc,
+        setICPC,
+        addICPC,
+        production,
+        setProduction,
+        productionRccm,
+        setProductionRccm,
+        quality,
+        setQuality,
+        qualityRccm,
+        setQualityRccm,
+        addProduction,
+        addQuality,
+        hold,
+        setHold,
+        addHold,
+        setFgsAccuracy,
+        addFgsaccuracy,
+        quality,
+        setQuality,
+        addQuality,
+        mixing,
+        addMixing,
+        setMixing,
+        eng,
+        addENG,
+        setENG,
+        hr,
+        setHR,
+        addHR,
+        bead,
+        addBead,
+        setBead,
+        addProductionRccm,
         restaurants,
+        setFgsGetTable,
         setRestaurants,
+        addfgsGetTable,
+        fgsGetTable,
         addRestaurants,
         selectedRestaurant,
         setSelectedRestaurant,
-        addSucess,sucess,
-        setSucess,datem, setDatem,ddate, setDdate,
-        login,setLogin,mixingRccm,setMixingRccm,holdRccm,setHoldRccm,beadRccm,setBeadRccm,engRccm,setENGRccm,
-        addQualityRccm,addMixingRccm,addHoldRccm,addHRRccm,addENGRccm,addBeadRccm,hrRccm,setHRRccm,addPress,setPress,press,time,setTime,
-        builderPressData,setBuilderPressData,pressData,setPressData,diffData,setDiffData,builderPressDataOne,setBuilderPressDataOne,sn,setSn,mom,setMom,momsucess, setSucessmom,addMom,addMachineCost,
-        machineCost,setMachineCost,pressLine,setPressLine,addPressOther,pressOther,setPressOther,addPressLine
+        addSucess,
+        sucess,
+        setSucess,
+        datem,
+        setDatem,
+        ddate,
+        setDdate,
+        login,
+        setLogin,
+        mixingRccm,
+        setMixingRccm,
+        holdRccm,
+        setHoldRccm,
+        beadRccm,
+        setBeadRccm,
+        engRccm,
+        setENGRccm,
+        addQualityRccm,
+        addMixingRccm,
+        addHoldRccm,
+        addHRRccm,
+        addENGRccm,
+        addBeadRccm,
+        hrRccm,
+        setHRRccm,
+        addPress,
+        setPress,
+        press,
+        time,
+        setTime,
+        builderPressData,
+        setBuilderPressData,
+        pressData,
+        setPressData,
+        diffData,
+        setDiffData,
+        builderPressDataOne,
+        setBuilderPressDataOne,
+        sn,
+        setSn,
+        mom,
+        setMom,
+        momsucess,
+        setSucessmom,
+        addMom,
+        addMachineCost,
+        machineCost,
+        setMachineCost,
+        pressLine,
+        setPressLine,
+        addPressOther,
+        pressOther,
+        setPressOther, 
+        addPressLine,
+        // pramod
+        addShotBlasting,
+        setShotBlasting,
+        shotBlasting,
+        setShotBlastingGetTable,
+        shotBlastingGetTable,
+        addShotBlastingGetTable
+
+      
       }}
     >
       {props.children}

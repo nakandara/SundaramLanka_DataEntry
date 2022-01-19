@@ -27,6 +27,7 @@ const AddProduction = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(date)
     try {
       const response = await RestaurantFinder.post("/reporting/mom/", {
         date,
